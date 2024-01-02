@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_partners_footers",
+  "info": {
+    "displayName": "partnersFooter"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": "In partnership with"
+    },
+    "partnerIcon": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image",
+      "required": true
+    }
+  }
+}

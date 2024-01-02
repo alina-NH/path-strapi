@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_welcome_buttons",
+  "info": {
+    "displayName": "welcomeButton",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": "Discuss with an expert"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    }
+  }
+}

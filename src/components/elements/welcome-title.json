@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_elements_welcome_titles",
+  "info": {
+    "displayName": "welcomeTitle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Perfect Padel Courts for"
+    },
+    "typedTitle1": {
+      "type": "string",
+      "default": "your Sport club",
+      "required": true
+    },
+    "typedTitle2": {
+      "type": "string",
+      "required": true,
+      "default": "your Sport center"
+    },
+    "typedTitle3": {
+      "type": "string",
+      "required": true,
+      "default": "your Tennis Club"
+    },
+    "typedTitle4": {
+      "type": "string",
+      "required": true,
+      "default": "your Paddel Tennis Club"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_containers_welcomes",
+  "info": {
+    "displayName": "welcome",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.welcome-title"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.welcome-button"
+    },
+    "partners": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.partners-footer"
+    }
+  }
+}
