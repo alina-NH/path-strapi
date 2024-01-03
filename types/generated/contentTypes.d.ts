@@ -967,6 +967,95 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiValidationErrorValidationError extends Schema.SingleType {
+  collectionName: 'validation_errors';
+  info: {
+    singularName: 'validation-error';
+    pluralName: 'validation-errors';
+    displayName: 'validationError';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    isString: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'The value must be a string'>;
+    isRequired: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'The value is required'>;
+    isEmail: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'Email is not valid'>;
+    isPhone: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'Phone number is not valid'>;
+    isMinLength: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'Minimum length is'>;
+    isMaxLength: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'Maximum length is'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::validation-error.validation-error',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::validation-error.validation-error',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::validation-error.validation-error',
+      'oneToMany',
+      'api::validation-error.validation-error'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -988,6 +1077,7 @@ declare module '@strapi/types' {
       'api::coming-soon.coming-soon': ApiComingSoonComingSoon;
       'api::common.common': ApiCommonCommon;
       'api::home.home': ApiHomeHome;
+      'api::validation-error.validation-error': ApiValidationErrorValidationError;
     }
   }
 }
