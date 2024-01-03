@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_blog_card_without_images",
+  "info": {
+    "displayName": "BlogCardWithoutImage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "PATH Excels in Development for Stratford Pavilion"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.link"
+    }
+  }
+}

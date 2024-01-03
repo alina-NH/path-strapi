@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_go_to_configurator_titles",
+  "info": {
+    "displayName": "goToConfiguratorTitle"
+  },
+  "options": {},
+  "attributes": {
+    "titleLine1": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Launch our Configurator"
+    },
+    "titleLine2": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "to customize your court"
+    },
+    "titleLine3": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "online, easily."
+    }
+  }
+}

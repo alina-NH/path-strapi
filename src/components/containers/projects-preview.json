@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_containers_projects_previews",
+  "info": {
+    "displayName": "projectsPreview"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Projects"
+    },
+    "cardLeftTop": {
+      "displayName": "cardLeftTop",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardLeftCenter": {
+      "displayName": "cardLeftCenter",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardLeftBottom": {
+      "displayName": "cardLeftBottom",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardCenterTop": {
+      "displayName": "cardCenterTop",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardCenterBottom": {
+      "displayName": "cardCenterBottom",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardRightTop": {
+      "displayName": "cardRightTop",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    },
+    "cardRightBottom": {
+      "displayName": "cardRightBottom",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card",
+      "required": true
+    }
+  }
+}

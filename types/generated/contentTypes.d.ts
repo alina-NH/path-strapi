@@ -368,6 +368,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     singularName: 'home';
     pluralName: 'homes';
     displayName: 'Home';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -379,6 +380,42 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
   attributes: {
     welcome: Attribute.Component<'containers.welcome'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    productsCarousel: Attribute.Component<'containers.products-carousel'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    goToConfigurator: Attribute.Component<'containers.go-to-configurator'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    projects: Attribute.Component<'containers.projects-preview'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    services: Attribute.Component<'containers.service-preview'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subscriptionForm: Attribute.Component<'containers.subscription-form'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    latestFromBlog: Attribute.Component<'containers.blog-preview'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

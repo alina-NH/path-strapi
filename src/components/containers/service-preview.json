@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_containers_service_previews",
+  "info": {
+    "displayName": "ServicePreview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.service-item",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Services"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true,
+      "default": "We help design, build, install, transport and maintain padel courts."
+    }
+  }
+}

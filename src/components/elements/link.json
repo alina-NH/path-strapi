@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_links",
+  "info": {
+    "displayName": "Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "/coming-soon"
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Coming soon"
+    }
+  }
+}

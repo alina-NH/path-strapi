@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_containers_blog_previews",
+  "info": {
+    "displayName": "BlogPreview"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Latest from the blog"
+    },
+    "cardLeft": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.blog-card-with-image",
+      "required": true
+    },
+    "cardCenter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.blog-card-with-image",
+      "required": true
+    },
+    "cardRightTop": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.blog-card-without-image",
+      "required": true
+    },
+    "cardRightBottom": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.blog-card-with-image",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_containers_products_carousels",
+  "info": {
+    "displayName": "productsCarousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "displayName": "ProductsCarouselItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.products-carousel-item",
+      "required": true
+    }
+  }
+}

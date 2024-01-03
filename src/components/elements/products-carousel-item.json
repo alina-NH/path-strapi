@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_products_carousel_items",
+  "info": {
+    "displayName": "ProductsCarouselItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "default": "Classic",
+      "required": true,
+      "repeatable": false
+    },
+    "text": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Easy to install & maintain, durable, and 100% compliant with the International Padel Federation specifications."
+    }
+  }
+}

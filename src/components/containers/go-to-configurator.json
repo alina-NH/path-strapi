@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_containers_go_to_configurators",
+  "info": {
+    "displayName": "goToConfigurator",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.go-to-configurator-title",
+      "required": true
+    },
+    "button": {
+      "type": "string",
+      "default": "Go to Configurator",
+      "repeatable": false,
+      "required": true
+    },
+    "buttonLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link",
+      "required": true
+    }
+  }
+}

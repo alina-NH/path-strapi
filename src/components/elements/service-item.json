@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_service_items",
+  "info": {
+    "displayName": "ServiceItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Design",
+      "required": true,
+      "repeatable": false
+    },
+    "text": {
+      "type": "text",
+      "default": "Use our online Court Configurator or request a completely custom design that fits your indoor or outdoor layout, terrain, landscape design, and goals.",
+      "required": true,
+      "repeatable": false
+    }
+  }
+}

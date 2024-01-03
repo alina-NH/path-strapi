@@ -9,17 +9,20 @@
     "title": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.welcome-title"
+      "component": "elements.welcome-title",
+      "required": true
     },
     "button": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.welcome-button"
+      "component": "elements.welcome-button",
+      "required": true
     },
     "partners": {
       "type": "component",
       "repeatable": false,
-      "component": "elements.partners-footer"
+      "component": "elements.partners-footer",
+      "required": true
     }
   }
 }

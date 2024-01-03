@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_blog_card_with_images",
+  "info": {
+    "displayName": "BlogCardWithImage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "5 Tips for a  Successful Padel Court Installation",
+      "repeatable": false
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.link"
+    }
+  }
+}

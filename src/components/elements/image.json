@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_images",
   "info": {
-    "displayName": "Image",
+    "displayName": "image",
     "description": ""
   },
   "options": {},
@@ -10,6 +10,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
+      "repeatable": false,
       "allowedTypes": [
         "images"
       ]
@@ -17,6 +18,7 @@
     "alt": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "Discuss with an expert"
     }
   }

@@ -8,26 +8,31 @@
     "title": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "Perfect Padel Courts for"
     },
     "typedTitle1": {
       "type": "string",
       "default": "your Sport club",
-      "required": true
+      "required": true,
+      "repeatable": false
     },
     "typedTitle2": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "your Sport center"
     },
     "typedTitle3": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "your Tennis Club"
     },
     "typedTitle4": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "your Paddel Tennis Club"
     }
   }

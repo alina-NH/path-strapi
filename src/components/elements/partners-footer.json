@@ -8,6 +8,7 @@
     "text": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "In partnership with"
     },
     "partnerIcon": {

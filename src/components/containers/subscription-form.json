@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_containers_subscription_forms",
+  "info": {
+    "displayName": "subscriptionForm",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Need help?"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true,
+      "default": "Leave your email, and we will get back to you."
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "required": true,
+      "default": "Email"
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "default": "Let’s Talk"
+    },
+    "successMessage": {
+      "type": "text",
+      "required": true,
+      "default": "Message has been sent."
+    }
+  }
+}
