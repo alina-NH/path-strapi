@@ -293,7 +293,7 @@ export interface ElementsHeaderNavItem extends Schema.Component {
   };
   attributes: {
     link: Attribute.Component<'elements.link'> & Attribute.Required;
-    subnav: Attribute.Component<'elements.link', true> & Attribute.Required;
+    subnav: Attribute.Component<'elements.link', true>;
   };
 }
 

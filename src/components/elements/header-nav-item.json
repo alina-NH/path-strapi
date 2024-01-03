@@ -15,7 +15,7 @@
     "subnav": {
       "type": "component",
       "repeatable": true,
-      "required": true,
+      "required": false,
       "component": "elements.link"
     }
   }
