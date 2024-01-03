@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_header_nav_items",
+  "info": {
+    "displayName": "HeaderItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.link"
+    },
+    "subnav": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "elements.link"
+    }
+  }
+}

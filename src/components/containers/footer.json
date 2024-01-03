@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_containers_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    },
+    "companyName": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Path Padel Sports International Limited"
+    },
+    "regNumber": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Reg. number: 08821795"
+    },
+    "companyAddress": {
+      "type": "text",
+      "default": "Address: Brent House, 382 Gloucester Road, Cheltenham, Gloucestershire, GL51 7AY",
+      "required": true,
+      "repeatable": false
+    },
+    "links": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.footer-nav"
+    }
+  }
+}

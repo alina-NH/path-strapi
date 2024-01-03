@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_select_items",
+  "info": {
+    "displayName": "SelectItem"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Subject 1",
+      "required": true,
+      "repeatable": false
+    }
+  }
+}

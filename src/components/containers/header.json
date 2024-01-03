@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_containers_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    },
+    "nav": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "elements.header-nav-item"
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Contact Us"
+    }
+  }
+}

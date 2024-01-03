@@ -20,6 +20,63 @@ export interface ContainersBlogPreview extends Schema.Component {
   };
 }
 
+export interface ContainersContactUs extends Schema.Component {
+  collectionName: 'components_containers_contactuses';
+  info: {
+    displayName: 'ContactUs';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Contact Us'>;
+    subtitle: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Ask a question, discuss your project with an expert, or request a quote.'>;
+    nameInputPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Name'>;
+    emailInputPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Email'>;
+    phoneInputPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Phone'>;
+    countryInputPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Country'>;
+    messageTextareaPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Message'>;
+    successMessage: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Message has been sent.'>;
+    selectInput: Attribute.Component<'elements.select-input'> &
+      Attribute.Required;
+    button: Attribute.Component<'elements.butto'> & Attribute.Required;
+  };
+}
+
+export interface ContainersFooter extends Schema.Component {
+  collectionName: 'components_containers_footers';
+  info: {
+    displayName: 'Footer';
+    description: '';
+  };
+  attributes: {
+    logo: Attribute.Component<'elements.image'> & Attribute.Required;
+    companyName: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Path Padel Sports International Limited'>;
+    regNumber: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Reg. number: 08821795'>;
+    companyAddress: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Address: Brent House, 382 Gloucester Road, Cheltenham, Gloucestershire, GL51 7AY'>;
+    links: Attribute.Component<'elements.footer-nav'> & Attribute.Required;
+  };
+}
+
 export interface ContainersGoToConfigurator extends Schema.Component {
   collectionName: 'components_containers_go_to_configurators';
   info: {
@@ -34,6 +91,22 @@ export interface ContainersGoToConfigurator extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Go to Configurator'>;
     buttonLink: Attribute.Component<'elements.link'> & Attribute.Required;
+  };
+}
+
+export interface ContainersHeader extends Schema.Component {
+  collectionName: 'components_containers_headers';
+  info: {
+    displayName: 'Header';
+    description: '';
+  };
+  attributes: {
+    logo: Attribute.Component<'elements.image'> & Attribute.Required;
+    nav: Attribute.Component<'elements.header-nav-item', true> &
+      Attribute.Required;
+    button: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Contact Us'>;
   };
 }
 
@@ -159,6 +232,41 @@ export interface ElementsBlogCardWithoutImage extends Schema.Component {
   };
 }
 
+export interface ElementsButto extends Schema.Component {
+  collectionName: 'components_elements_buttos';
+  info: {
+    displayName: 'buttonWithIcon';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Contact Us'>;
+    icon: Attribute.Component<'elements.image'> & Attribute.Required;
+  };
+}
+
+export interface ElementsFooterNavColumn extends Schema.Component {
+  collectionName: 'components_elements_footer_nav_columns';
+  info: {
+    displayName: 'FooterNavColumn';
+  };
+  attributes: {
+    links: Attribute.Component<'elements.link', true> & Attribute.Required;
+  };
+}
+
+export interface ElementsFooterNav extends Schema.Component {
+  collectionName: 'components_elements_footer_navs';
+  info: {
+    displayName: 'FooterNav';
+  };
+  attributes: {
+    columns: Attribute.Component<'elements.footer-nav-column', true> &
+      Attribute.Required;
+  };
+}
+
 export interface ElementsGoToConfiguratorTitle extends Schema.Component {
   collectionName: 'components_elements_go_to_configurator_titles';
   info: {
@@ -174,6 +282,18 @@ export interface ElementsGoToConfiguratorTitle extends Schema.Component {
     titleLine3: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'online, easily.'>;
+  };
+}
+
+export interface ElementsHeaderNavItem extends Schema.Component {
+  collectionName: 'components_elements_header_nav_items';
+  info: {
+    displayName: 'HeaderItem';
+    description: '';
+  };
+  attributes: {
+    link: Attribute.Component<'elements.link'> & Attribute.Required;
+    subnav: Attribute.Component<'elements.link', true> & Attribute.Required;
   };
 }
 
@@ -252,6 +372,33 @@ export interface ElementsProjectCard extends Schema.Component {
   };
 }
 
+export interface ElementsSelectInput extends Schema.Component {
+  collectionName: 'components_elements_select_inputs';
+  info: {
+    displayName: 'selectInput';
+    description: '';
+  };
+  attributes: {
+    placeholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Subject'>;
+    items: Attribute.Component<'elements.select-item', true> &
+      Attribute.Required;
+  };
+}
+
+export interface ElementsSelectItem extends Schema.Component {
+  collectionName: 'components_elements_select_items';
+  info: {
+    displayName: 'SelectItem';
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Subject 1'>;
+  };
+}
+
 export interface ElementsServiceItem extends Schema.Component {
   collectionName: 'components_elements_service_items';
   info: {
@@ -310,7 +457,10 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'containers.blog-preview': ContainersBlogPreview;
+      'containers.contact-us': ContainersContactUs;
+      'containers.footer': ContainersFooter;
       'containers.go-to-configurator': ContainersGoToConfigurator;
+      'containers.header': ContainersHeader;
       'containers.products-carousel': ContainersProductsCarousel;
       'containers.projects-preview': ContainersProjectsPreview;
       'containers.service-preview': ContainersServicePreview;
@@ -318,12 +468,18 @@ declare module '@strapi/types' {
       'containers.welcome': ContainersWelcome;
       'elements.blog-card-with-image': ElementsBlogCardWithImage;
       'elements.blog-card-without-image': ElementsBlogCardWithoutImage;
+      'elements.butto': ElementsButto;
+      'elements.footer-nav-column': ElementsFooterNavColumn;
+      'elements.footer-nav': ElementsFooterNav;
       'elements.go-to-configurator-title': ElementsGoToConfiguratorTitle;
+      'elements.header-nav-item': ElementsHeaderNavItem;
       'elements.image': ElementsImage;
       'elements.link': ElementsLink;
       'elements.partners-footer': ElementsPartnersFooter;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
       'elements.project-card': ElementsProjectCard;
+      'elements.select-input': ElementsSelectInput;
+      'elements.select-item': ElementsSelectItem;
       'elements.service-item': ElementsServiceItem;
       'elements.welcome-button': ElementsWelcomeButton;
       'elements.welcome-title': ElementsWelcomeTitle;

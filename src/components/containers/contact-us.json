@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_containers_contactuses",
+  "info": {
+    "displayName": "ContactUs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Contact Us"
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "Ask a question, discuss your project with an expert, or request a quote.",
+      "required": true
+    },
+    "nameInputPlaceholder": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Name"
+    },
+    "emailInputPlaceholder": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Email"
+    },
+    "phoneInputPlaceholder": {
+      "type": "string",
+      "default": "Phone",
+      "required": true,
+      "repeatable": false
+    },
+    "countryInputPlaceholder": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Country"
+    },
+    "messageTextareaPlaceholder": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Message"
+    },
+    "successMessage": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Message has been sent."
+    },
+    "selectInput": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.select-input"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.butto"
+    }
+  }
+}

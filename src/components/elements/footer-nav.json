@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_footer_navs",
+  "info": {
+    "displayName": "FooterNav"
+  },
+  "options": {},
+  "attributes": {
+    "columns": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "elements.footer-nav-column"
+    }
+  }
+}
