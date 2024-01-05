@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_containers_court_welcomes",
+  "info": {
+    "displayName": "CourtWelcome",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "PATH Alba"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "The Eternal Classics of Padel Courts"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "The most popular of our catalog, PATH Alba combines easy assembly & maintenane with high durability and perfect player experience."
+    },
+    "link": {
+      "type": "string",
+      "default": "/classic",
+      "required": true,
+      "repeatable": false
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image"
+    }
+  }
+}

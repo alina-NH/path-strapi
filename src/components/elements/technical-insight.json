@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_elements_technical_insights",
+  "info": {
+    "displayName": "TechnicalInsight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Structure"
+    },
+    "text": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Galvanized steel posts and mesh manufactured aling with the International Padel Federation requirements:"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list",
+      "required": true
+    }
+  }
+}

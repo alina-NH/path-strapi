@@ -19,6 +19,7 @@
     "welcome": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -29,6 +30,7 @@
     "productsCarousel": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -39,6 +41,7 @@
     "goToConfigurator": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -49,6 +52,7 @@
     "projects": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -59,6 +63,7 @@
     "services": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -69,6 +74,7 @@
     "subscriptionForm": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -79,6 +85,7 @@
     "latestFromBlog": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

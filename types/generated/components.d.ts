@@ -56,6 +56,46 @@ export interface ContainersContactUs extends Schema.Component {
   };
 }
 
+export interface ContainersCourtProjects extends Schema.Component {
+  collectionName: 'components_containers_court_projects';
+  info: {
+    displayName: 'CourtProjects';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Our Projects'>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Explore our PATH Alba projects to see the model in action'>;
+    projects: Attribute.Component<'elements.court-project-card', true> &
+      Attribute.Required;
+  };
+}
+
+export interface ContainersCourtWelcome extends Schema.Component {
+  collectionName: 'components_containers_court_welcomes';
+  info: {
+    displayName: 'CourtWelcome';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'PATH Alba'>;
+    subtitle: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'The Eternal Classics of Padel Courts'>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'The most popular of our catalog, PATH Alba combines easy assembly & maintenane with high durability and perfect player experience.'>;
+    link: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/classic'>;
+    image: Attribute.Component<'elements.image'>;
+  };
+}
+
 export interface ContainersFooter extends Schema.Component {
   collectionName: 'components_containers_footers';
   info: {
@@ -191,6 +231,22 @@ export interface ContainersSubscriptionForm extends Schema.Component {
   };
 }
 
+export interface ContainersTechnicalInsights extends Schema.Component {
+  collectionName: 'components_containers_technical_insights';
+  info: {
+    displayName: 'TechnicalInsights';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Technical Insights'>;
+    cards: Attribute.Component<'elements.technical-insight', true> &
+      Attribute.Required;
+    downloadFile: Attribute.Component<'elements.download-file-card'> &
+      Attribute.Required;
+  };
+}
+
 export interface ContainersWelcome extends Schema.Component {
   collectionName: 'components_containers_welcomes';
   info: {
@@ -243,6 +299,34 @@ export interface ElementsButto extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Contact Us'>;
     icon: Attribute.Component<'elements.image'> & Attribute.Required;
+  };
+}
+
+export interface ElementsCourtProjectCard extends Schema.Component {
+  collectionName: 'components_elements_court_project_cards';
+  info: {
+    displayName: 'CourtProjectCard';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Bridgewater Resort & SPA'>;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
+  };
+}
+
+export interface ElementsDownloadFileCard extends Schema.Component {
+  collectionName: 'components_elements_download_file_cards';
+  info: {
+    displayName: 'DownloadFileCard';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Download Full Technical Spec'>;
+    icon: Attribute.Component<'elements.image'> & Attribute.Required;
+    file: Attribute.Media & Attribute.Required;
   };
 }
 
@@ -327,6 +411,19 @@ export interface ElementsLink extends Schema.Component {
   };
 }
 
+export interface ElementsList extends Schema.Component {
+  collectionName: 'components_elements_lists';
+  info: {
+    displayName: 'ListItem';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Reinforced joints'>;
+  };
+}
+
 export interface ElementsPartnersFooter extends Schema.Component {
   collectionName: 'components_elements_partners_footers';
   info: {
@@ -355,6 +452,7 @@ export interface ElementsProductsCarouselItem extends Schema.Component {
     text: Attribute.Text &
       Attribute.Required &
       Attribute.DefaultTo<'Easy to install & maintain, durable, and 100% compliant with the International Padel Federation specifications.'>;
+    link: Attribute.Component<'elements.link'> & Attribute.Required;
   };
 }
 
@@ -367,8 +465,8 @@ export interface ElementsProjectCard extends Schema.Component {
     title: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Sport Clubs'>;
-    icon: Attribute.Component<'elements.image'>;
-    link: Attribute.Component<'elements.link'>;
+    icon: Attribute.Component<'elements.image'> & Attribute.Required;
+    link: Attribute.Component<'elements.link'> & Attribute.Required;
   };
 }
 
@@ -415,6 +513,23 @@ export interface ElementsServiceItem extends Schema.Component {
   };
 }
 
+export interface ElementsTechnicalInsight extends Schema.Component {
+  collectionName: 'components_elements_technical_insights';
+  info: {
+    displayName: 'TechnicalInsight';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Structure'>;
+    text: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Galvanized steel posts and mesh manufactured aling with the International Padel Federation requirements:'>;
+    list: Attribute.Component<'elements.list', true> & Attribute.Required;
+  };
+}
+
 export interface ElementsWelcomeButton extends Schema.Component {
   collectionName: 'components_elements_welcome_buttons';
   info: {
@@ -458,6 +573,8 @@ declare module '@strapi/types' {
     export interface Components {
       'containers.blog-preview': ContainersBlogPreview;
       'containers.contact-us': ContainersContactUs;
+      'containers.court-projects': ContainersCourtProjects;
+      'containers.court-welcome': ContainersCourtWelcome;
       'containers.footer': ContainersFooter;
       'containers.go-to-configurator': ContainersGoToConfigurator;
       'containers.header': ContainersHeader;
@@ -465,22 +582,27 @@ declare module '@strapi/types' {
       'containers.projects-preview': ContainersProjectsPreview;
       'containers.service-preview': ContainersServicePreview;
       'containers.subscription-form': ContainersSubscriptionForm;
+      'containers.technical-insights': ContainersTechnicalInsights;
       'containers.welcome': ContainersWelcome;
       'elements.blog-card-with-image': ElementsBlogCardWithImage;
       'elements.blog-card-without-image': ElementsBlogCardWithoutImage;
       'elements.butto': ElementsButto;
+      'elements.court-project-card': ElementsCourtProjectCard;
+      'elements.download-file-card': ElementsDownloadFileCard;
       'elements.footer-nav-column': ElementsFooterNavColumn;
       'elements.footer-nav': ElementsFooterNav;
       'elements.go-to-configurator-title': ElementsGoToConfiguratorTitle;
       'elements.header-nav-item': ElementsHeaderNavItem;
       'elements.image': ElementsImage;
       'elements.link': ElementsLink;
+      'elements.list': ElementsList;
       'elements.partners-footer': ElementsPartnersFooter;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
       'elements.project-card': ElementsProjectCard;
       'elements.select-input': ElementsSelectInput;
       'elements.select-item': ElementsSelectItem;
       'elements.service-item': ElementsServiceItem;
+      'elements.technical-insight': ElementsTechnicalInsight;
       'elements.welcome-button': ElementsWelcomeButton;
       'elements.welcome-title': ElementsWelcomeTitle;
     }

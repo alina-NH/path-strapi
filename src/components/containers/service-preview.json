@@ -15,11 +15,13 @@
     "title": {
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "Services"
     },
     "subtitle": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "We help design, build, install, transport and maintain padel courts."
     }
   }

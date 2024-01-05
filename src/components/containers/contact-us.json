@@ -14,7 +14,8 @@
     "subtitle": {
       "type": "text",
       "default": "Ask a question, discuss your project with an expert, or request a quote.",
-      "required": true
+      "required": true,
+      "repeatable": false
     },
     "nameInputPlaceholder": {
       "type": "string",

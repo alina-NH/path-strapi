@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_containers_technical_insights",
+  "info": {
+    "displayName": "TechnicalInsights"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Technical Insights"
+    },
+    "cards": {
+      "type": "component",
+      "required": true,
+      "repeatable": true,
+      "component": "elements.technical-insight"
+    },
+    "downloadFile": {
+      "type": "component",
+      "required": true,
+      "repeatable": false,
+      "component": "elements.download-file-card"
+    }
+  }
+}

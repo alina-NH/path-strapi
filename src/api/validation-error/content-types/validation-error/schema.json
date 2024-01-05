@@ -19,6 +19,7 @@
     "isString": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "The value must be a string",
       "pluginOptions": {
         "i18n": {
@@ -29,6 +30,7 @@
     "isRequired": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "The value is required",
       "pluginOptions": {
         "i18n": {
@@ -39,6 +41,7 @@
     "isEmail": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "Email is not valid",
       "pluginOptions": {
         "i18n": {
@@ -49,6 +52,7 @@
     "isPhone": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "Phone number is not valid",
       "pluginOptions": {
         "i18n": {
@@ -59,6 +63,7 @@
     "isMinLength": {
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "Minimum length is",
       "pluginOptions": {
         "i18n": {
@@ -70,6 +75,7 @@
       "type": "text",
       "default": "Maximum length is",
       "required": true,
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true

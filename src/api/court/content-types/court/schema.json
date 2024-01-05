@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
-  "collectionName": "commons",
+  "kind": "collectionType",
+  "collectionName": "courts",
   "info": {
-    "singularName": "common",
-    "pluralName": "commons",
-    "displayName": "Common",
+    "singularName": "court",
+    "pluralName": "courts",
+    "displayName": "Court",
     "description": ""
   },
   "options": {
@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "header": {
+    "welcome": {
       "type": "component",
       "repeatable": false,
       "required": true,
@@ -25,20 +25,20 @@
           "localized": true
         }
       },
-      "component": "containers.header"
+      "component": "containers.court-welcome"
     },
-    "contactUs": {
+    "technicalInsights": {
       "type": "component",
       "repeatable": false,
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "containers.contact-us"
+      "component": "containers.technical-insights",
+      "required": true
     },
-    "footer": {
+    "goToConfigurator": {
       "type": "component",
       "repeatable": false,
       "required": true,
@@ -47,7 +47,18 @@
           "localized": true
         }
       },
-      "component": "containers.footer"
+      "component": "containers.go-to-configurator"
+    },
+    "courtProjects": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "containers.court-projects"
     }
   }
 }

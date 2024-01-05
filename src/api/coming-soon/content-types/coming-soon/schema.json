@@ -24,6 +24,7 @@
       },
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "Coming Soon"
     },
     "subtitle": {
@@ -34,6 +35,7 @@
       },
       "type": "text",
       "required": true,
+      "repeatable": false,
       "default": "We're working hard to bring you something amazing. Stay tuned!"
     },
     "button": {
@@ -44,6 +46,7 @@
       },
       "type": "string",
       "required": true,
+      "repeatable": false,
       "default": "Return back"
     }
   }

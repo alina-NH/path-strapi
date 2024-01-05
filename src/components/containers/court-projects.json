@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_containers_court_projects",
+  "info": {
+    "displayName": "CourtProjects"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Our Projects"
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Explore our PATH Alba projects to see the model in action"
+    },
+    "projects": {
+      "type": "component",
+      "required": true,
+      "repeatable": true,
+      "component": "elements.court-project-card"
+    }
+  }
+}

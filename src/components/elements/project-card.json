@@ -7,17 +7,20 @@
   "attributes": {
     "title": {
       "type": "string",
+      "repeatable": false,
       "required": true,
       "default": "Sport Clubs"
     },
     "icon": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "elements.image"
     },
     "link": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "elements.link"
     }
   }

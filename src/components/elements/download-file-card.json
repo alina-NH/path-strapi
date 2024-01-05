@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_download_file_cards",
+  "info": {
+    "displayName": "DownloadFileCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "repeatable": false,
+      "default": "Download Full Technical Spec"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "file": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "repeatable": false
+    }
+  }
+}

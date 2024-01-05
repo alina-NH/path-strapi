@@ -23,6 +23,12 @@
       "required": true,
       "repeatable": false,
       "default": "Easy to install & maintain, durable, and 100% compliant with the International Padel Federation specifications."
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.link"
     }
   }
 }

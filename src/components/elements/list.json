@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_lists",
+  "info": {
+    "displayName": "ListItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true,
+      "repeatable": false,
+      "default": "Reinforced joints"
+    }
+  }
+}
