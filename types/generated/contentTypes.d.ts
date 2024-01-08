@@ -1046,6 +1046,60 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiProjectProject extends Schema.SingleType {
+  collectionName: 'projects';
+  info: {
+    singularName: 'project';
+    pluralName: 'projects';
+    displayName: 'Project';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    welcome: Attribute.Component<'containers.welcome-title-text'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    items: Attribute.Component<'elements.project-description', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::project.project',
+      'oneToMany',
+      'api::project.project'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiValidationErrorValidationError extends Schema.SingleType {
   collectionName: 'validation_errors';
   info: {
@@ -1157,6 +1211,7 @@ declare module '@strapi/types' {
       'api::common.common': ApiCommonCommon;
       'api::court.court': ApiCourtCourt;
       'api::home.home': ApiHomeHome;
+      'api::project.project': ApiProjectProject;
       'api::validation-error.validation-error': ApiValidationErrorValidationError;
     }
   }

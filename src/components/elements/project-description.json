@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_elements_project_descriptions",
+  "info": {
+    "displayName": "ProjectDescription",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Sport Clubs"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.project-paragraph",
+      "required": true
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "default": "Request a Free Consultation"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "projectId": {
+      "type": "string",
+      "default": "sport-clubs",
+      "required": true
+    }
+  }
+}

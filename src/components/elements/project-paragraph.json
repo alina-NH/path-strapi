@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_elements_project_paragraphs",
+  "info": {
+    "displayName": "ProjectParagraph"
+  },
+  "options": {},
+  "attributes": {
+    "paragraph": {
+      "type": "text",
+      "required": true,
+      "default": "Path Padel Courts are an invaluable asset for sport clubs, offering numerous advantages that contribute to the club's success, membership growth, and overall appeal."
+    }
+  }
+}

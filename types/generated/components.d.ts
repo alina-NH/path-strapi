@@ -247,6 +247,24 @@ export interface ContainersTechnicalInsights extends Schema.Component {
   };
 }
 
+export interface ContainersWelcomeTitleText extends Schema.Component {
+  collectionName: 'components_containers_welcome_title_texts';
+  info: {
+    displayName: 'WelcomeTitleText';
+  };
+  attributes: {
+    titleLine1: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Explore the benefits'>;
+    titleLine2: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Of having a Path Padel Court '>;
+    titleLine3: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'At your facility'>;
+  };
+}
+
 export interface ContainersWelcome extends Schema.Component {
   collectionName: 'components_containers_welcomes';
   info: {
@@ -474,6 +492,40 @@ export interface ElementsProjectCard extends Schema.Component {
   };
 }
 
+export interface ElementsProjectDescription extends Schema.Component {
+  collectionName: 'components_elements_project_descriptions';
+  info: {
+    displayName: 'ProjectDescription';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Sport Clubs'>;
+    description: Attribute.Component<'elements.project-paragraph', true> &
+      Attribute.Required;
+    button: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Request a Free Consultation'>;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
+    projectId: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'sport-clubs'>;
+  };
+}
+
+export interface ElementsProjectParagraph extends Schema.Component {
+  collectionName: 'components_elements_project_paragraphs';
+  info: {
+    displayName: 'ProjectParagraph';
+  };
+  attributes: {
+    paragraph: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<"Path Padel Courts are an invaluable asset for sport clubs, offering numerous advantages that contribute to the club's success, membership growth, and overall appeal.">;
+  };
+}
+
 export interface ElementsSelectInput extends Schema.Component {
   collectionName: 'components_elements_select_inputs';
   info: {
@@ -587,6 +639,7 @@ declare module '@strapi/types' {
       'containers.service-preview': ContainersServicePreview;
       'containers.subscription-form': ContainersSubscriptionForm;
       'containers.technical-insights': ContainersTechnicalInsights;
+      'containers.welcome-title-text': ContainersWelcomeTitleText;
       'containers.welcome': ContainersWelcome;
       'elements.blog-card-with-image': ElementsBlogCardWithImage;
       'elements.blog-card-without-image': ElementsBlogCardWithoutImage;
@@ -603,6 +656,8 @@ declare module '@strapi/types' {
       'elements.partners-footer': ElementsPartnersFooter;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
       'elements.project-card': ElementsProjectCard;
+      'elements.project-description': ElementsProjectDescription;
+      'elements.project-paragraph': ElementsProjectParagraph;
       'elements.select-input': ElementsSelectInput;
       'elements.select-item': ElementsSelectItem;
       'elements.service-item': ElementsServiceItem;

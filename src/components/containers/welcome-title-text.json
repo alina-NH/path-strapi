@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_containers_welcome_title_texts",
+  "info": {
+    "displayName": "WelcomeTitleText"
+  },
+  "options": {},
+  "attributes": {
+    "titleLine1": {
+      "type": "string",
+      "required": true,
+      "default": "Explore the benefits"
+    },
+    "titleLine2": {
+      "type": "string",
+      "required": true,
+      "default": "Of having a Path Padel Court "
+    },
+    "titleLine3": {
+      "type": "string",
+      "required": true,
+      "default": "At your facility"
+    }
+  }
+}
