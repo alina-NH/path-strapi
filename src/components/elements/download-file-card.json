@@ -18,14 +18,10 @@
       "component": "elements.image",
       "required": true
     },
-    "file": {
-      "allowedTypes": [
-        "files"
-      ],
-      "type": "media",
-      "multiple": false,
+    "cloudinaryPublicId": {
+      "type": "string",
       "required": true,
-      "repeatable": false
+      "default": "images/macdaljouirbuhq5ug7g"
     }
   }
 }

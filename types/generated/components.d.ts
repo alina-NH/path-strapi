@@ -326,7 +326,9 @@ export interface ElementsDownloadFileCard extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Download Full Technical Spec'>;
     icon: Attribute.Component<'elements.image'> & Attribute.Required;
-    file: Attribute.Media & Attribute.Required;
+    cloudinaryPublicId: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'images/macdaljouirbuhq5ug7g'>;
   };
 }
 
@@ -388,10 +390,12 @@ export interface ElementsImage extends Schema.Component {
     description: '';
   };
   attributes: {
-    image: Attribute.Media & Attribute.Required;
     alt: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Discuss with an expert'>;
+    cloudinaryPublicId: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'images/macdaljouirbuhq5ug7g'>;
   };
 }
 

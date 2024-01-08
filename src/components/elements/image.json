@@ -6,20 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "repeatable": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "alt": {
       "type": "string",
       "required": true,
       "repeatable": false,
       "default": "Discuss with an expert"
+    },
+    "cloudinaryPublicId": {
+      "type": "string",
+      "required": true,
+      "default": "images/macdaljouirbuhq5ug7g"
     }
   }
 }
