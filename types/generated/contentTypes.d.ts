@@ -1046,6 +1046,68 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiPortfolioPortfolio extends Schema.SingleType {
+  collectionName: 'portfolios';
+  info: {
+    singularName: 'portfolio';
+    pluralName: 'portfolios';
+    displayName: 'Portfolio';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    welcome: Attribute.Component<'containers.welcome-title-text'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    portfolioTabs: Attribute.Component<'elements.portfolio-tab', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    portfolioItems: Attribute.Component<'elements.portfolio-item', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::portfolio.portfolio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::portfolio.portfolio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::portfolio.portfolio',
+      'oneToMany',
+      'api::portfolio.portfolio'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiProjectProject extends Schema.SingleType {
   collectionName: 'projects';
   info: {
@@ -1211,6 +1273,7 @@ declare module '@strapi/types' {
       'api::common.common': ApiCommonCommon;
       'api::court.court': ApiCourtCourt;
       'api::home.home': ApiHomeHome;
+      'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::project.project': ApiProjectProject;
       'api::validation-error.validation-error': ApiValidationErrorValidationError;
     }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_containers_welcome_title_texts",
   "info": {
-    "displayName": "WelcomeTitleText"
+    "displayName": "WelcomeTitleText",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,6 +20,10 @@
       "type": "string",
       "required": true,
       "default": "At your facility"
+    },
+    "description": {
+      "type": "text",
+      "default": "Watch PATH Padel Courts in action."
     }
   }
 }

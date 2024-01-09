@@ -1,0 +1,66 @@
+{
+  "collectionName": "components_elements_portfolio_items",
+  "info": {
+    "displayName": "PortfolioItem"
+  },
+  "options": {},
+  "attributes": {
+    "titleLine1": {
+      "type": "string",
+      "required": true,
+      "default": "Providing a PATH Alba"
+    },
+    "titleLine2": {
+      "type": "string",
+      "required": true,
+      "default": "For a luxury residence hotel"
+    },
+    "client": {
+      "type": "string",
+      "required": true,
+      "default": "Client: Bridgewater Resort & SPA"
+    },
+    "location": {
+      "type": "string",
+      "required": true,
+      "default": "Bridgewater, UK"
+    },
+    "court": {
+      "type": "string",
+      "default": "Path ALBA",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "default": "Turnkey",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "default": "Revolutionizing leisure experiences within the hospitality industry, this Project explores the transformation of a luxury resort and spa hotel through the integration of a state-of-the-art padel court. The project aimed to redefine the guest experience, catering to the discerning tastes of patrons seeking elevated recreational offerings."
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "default": "View"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "tab": {
+      "type": "string",
+      "required": true,
+      "default": "hotels-and-resorts"
+    },
+    "media": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.image",
+      "required": true
+    }
+  }
+}

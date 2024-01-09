@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_portfolio_tabs",
+  "info": {
+    "displayName": "PortfolioTab",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Sport Clubs"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    },
+    "tab": {
+      "type": "string",
+      "required": true,
+      "default": "sport-clubs"
+    }
+  }
+}

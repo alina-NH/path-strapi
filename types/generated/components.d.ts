@@ -251,6 +251,7 @@ export interface ContainersWelcomeTitleText extends Schema.Component {
   collectionName: 'components_containers_welcome_title_texts';
   info: {
     displayName: 'WelcomeTitleText';
+    description: '';
   };
   attributes: {
     titleLine1: Attribute.String &
@@ -262,6 +263,8 @@ export interface ContainersWelcomeTitleText extends Schema.Component {
     titleLine3: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'At your facility'>;
+    description: Attribute.Text &
+      Attribute.DefaultTo<'Watch PATH Padel Courts in action.'>;
   };
 }
 
@@ -460,6 +463,59 @@ export interface ElementsPartnersFooter extends Schema.Component {
   };
 }
 
+export interface ElementsPortfolioItem extends Schema.Component {
+  collectionName: 'components_elements_portfolio_items';
+  info: {
+    displayName: 'PortfolioItem';
+  };
+  attributes: {
+    titleLine1: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Providing a PATH Alba'>;
+    titleLine2: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'For a luxury residence hotel'>;
+    client: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Client: Bridgewater Resort & SPA'>;
+    location: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Bridgewater, UK'>;
+    court: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Path ALBA'>;
+    type: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Turnkey'>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Revolutionizing leisure experiences within the hospitality industry, this Project explores the transformation of a luxury resort and spa hotel through the integration of a state-of-the-art padel court. The project aimed to redefine the guest experience, catering to the discerning tastes of patrons seeking elevated recreational offerings.'>;
+    button: Attribute.String & Attribute.Required & Attribute.DefaultTo<'View'>;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
+    tab: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'hotels-and-resorts'>;
+    media: Attribute.Component<'elements.image', true> & Attribute.Required;
+  };
+}
+
+export interface ElementsPortfolioTab extends Schema.Component {
+  collectionName: 'components_elements_portfolio_tabs';
+  info: {
+    displayName: 'PortfolioTab';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Sport Clubs'>;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
+    tab: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'sport-clubs'>;
+  };
+}
+
 export interface ElementsProductsCarouselItem extends Schema.Component {
   collectionName: 'components_elements_products_carousel_items';
   info: {
@@ -654,6 +710,8 @@ declare module '@strapi/types' {
       'elements.link': ElementsLink;
       'elements.list': ElementsList;
       'elements.partners-footer': ElementsPartnersFooter;
+      'elements.portfolio-item': ElementsPortfolioItem;
+      'elements.portfolio-tab': ElementsPortfolioTab;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
       'elements.project-card': ElementsProjectCard;
       'elements.project-description': ElementsProjectDescription;
