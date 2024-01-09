@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_elements_blog_items",
+  "info": {
+    "displayName": "BlogItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Let your neighbours envy: padel courts for private residences",
+      "required": true
+    },
+    "date": {
+      "type": "string",
+      "required": true,
+      "default": "December 12, 2023"
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "default": "Continue reading"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.project-paragraph",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    }
+  }
+}

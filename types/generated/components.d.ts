@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface ContainersBlogList extends Schema.Component {
+  collectionName: 'components_containers_blog_lists';
+  info: {
+    displayName: 'BlogList';
+  };
+  attributes: {
+    searchInputPlaceholder: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Search'>;
+    list: Attribute.Component<'elements.blog-item', true>;
+  };
+}
+
 export interface ContainersBlogPreview extends Schema.Component {
   collectionName: 'components_containers_blog_previews';
   info: {
@@ -260,9 +273,7 @@ export interface ContainersWelcomeTitleText extends Schema.Component {
     titleLine2: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Of having a Path Padel Court '>;
-    titleLine3: Attribute.String &
-      Attribute.Required &
-      Attribute.DefaultTo<'At your facility'>;
+    titleLine3: Attribute.String & Attribute.DefaultTo<'At your facility'>;
     description: Attribute.Text &
       Attribute.DefaultTo<'Watch PATH Padel Courts in action.'>;
   };
@@ -306,6 +317,28 @@ export interface ElementsBlogCardWithoutImage extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'PATH Excels in Development for Stratford Pavilion'>;
     link: Attribute.Component<'elements.link'> & Attribute.Required;
+  };
+}
+
+export interface ElementsBlogItem extends Schema.Component {
+  collectionName: 'components_elements_blog_items';
+  info: {
+    displayName: 'BlogItem';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Let your neighbours envy: padel courts for private residences'>;
+    date: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'December 12, 2023'>;
+    button: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Continue reading'>;
+    text: Attribute.Component<'elements.project-paragraph', true> &
+      Attribute.Required;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
   };
 }
 
@@ -660,6 +693,7 @@ export interface ElementsWelcomeTitle extends Schema.Component {
   collectionName: 'components_elements_welcome_titles';
   info: {
     displayName: 'welcomeTitle';
+    description: '';
   };
   attributes: {
     title: Attribute.String &
@@ -683,6 +717,7 @@ export interface ElementsWelcomeTitle extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'containers.blog-list': ContainersBlogList;
       'containers.blog-preview': ContainersBlogPreview;
       'containers.contact-us': ContainersContactUs;
       'containers.court-projects': ContainersCourtProjects;
@@ -699,6 +734,7 @@ declare module '@strapi/types' {
       'containers.welcome': ContainersWelcome;
       'elements.blog-card-with-image': ElementsBlogCardWithImage;
       'elements.blog-card-without-image': ElementsBlogCardWithoutImage;
+      'elements.blog-item': ElementsBlogItem;
       'elements.butto': ElementsButto;
       'elements.court-project-card': ElementsCourtProjectCard;
       'elements.download-file-card': ElementsDownloadFileCard;

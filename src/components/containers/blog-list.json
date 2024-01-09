@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_containers_blog_lists",
+  "info": {
+    "displayName": "BlogList"
+  },
+  "options": {},
+  "attributes": {
+    "searchInputPlaceholder": {
+      "type": "string",
+      "required": true,
+      "default": "Search"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.blog-item",
+      "required": false
+    }
+  }
+}

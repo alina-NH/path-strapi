@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_welcome_titles",
   "info": {
-    "displayName": "welcomeTitle"
+    "displayName": "welcomeTitle",
+    "description": ""
   },
   "options": {},
   "attributes": {
