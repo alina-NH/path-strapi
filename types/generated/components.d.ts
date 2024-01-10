@@ -276,6 +276,8 @@ export interface ContainersWelcomeTitleText extends Schema.Component {
     titleLine3: Attribute.String & Attribute.DefaultTo<'At your facility'>;
     description: Attribute.Text &
       Attribute.DefaultTo<'Watch PATH Padel Courts in action.'>;
+    typedTexts: Attribute.Component<'elements.welcome-typed-text', true>;
+    button: Attribute.String & Attribute.DefaultTo<'Watch PATH in action'>;
   };
 }
 
@@ -714,6 +716,16 @@ export interface ElementsWelcomeTitle extends Schema.Component {
   };
 }
 
+export interface ElementsWelcomeTypedText extends Schema.Component {
+  collectionName: 'components_elements_welcome_typed_texts';
+  info: {
+    displayName: 'WelcomeTypedText';
+  };
+  attributes: {
+    text: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -758,6 +770,7 @@ declare module '@strapi/types' {
       'elements.technical-insight': ElementsTechnicalInsight;
       'elements.welcome-button': ElementsWelcomeButton;
       'elements.welcome-title': ElementsWelcomeTitle;
+      'elements.welcome-typed-text': ElementsWelcomeTypedText;
     }
   }
 }

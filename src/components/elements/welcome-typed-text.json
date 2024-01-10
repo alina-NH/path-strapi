@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_elements_welcome_typed_texts",
+  "info": {
+    "displayName": "WelcomeTypedText"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

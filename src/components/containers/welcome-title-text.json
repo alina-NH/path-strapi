@@ -24,6 +24,16 @@
     "description": {
       "type": "text",
       "default": "Watch PATH Padel Courts in action."
+    },
+    "typedTexts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.welcome-typed-text"
+    },
+    "button": {
+      "type": "string",
+      "default": "Watch PATH in action",
+      "required": false
     }
   }
 }
