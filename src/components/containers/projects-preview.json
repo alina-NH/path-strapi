@@ -18,29 +18,22 @@
       "component": "elements.project-card",
       "required": true
     },
-    "cardLeftCenter": {
-      "displayName": "cardLeftCenter",
+    "cardLeftCenterLeft": {
+      "displayName": "cardLeftCenterLeft",
       "type": "component",
       "repeatable": false,
-      "component": "elements.project-card",
+      "component": "elements.project-card-without-image",
+      "required": true
+    },
+    "cardLeftCenterRight": {
+      "displayName": "cardLeftCenterRight",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.project-card-without-image",
       "required": true
     },
     "cardLeftBottom": {
       "displayName": "cardLeftBottom",
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.project-card",
-      "required": true
-    },
-    "cardCenterTop": {
-      "displayName": "cardCenterTop",
-      "type": "component",
-      "repeatable": false,
-      "component": "elements.project-card",
-      "required": true
-    },
-    "cardCenterBottom": {
-      "displayName": "cardCenterBottom",
       "type": "component",
       "repeatable": false,
       "component": "elements.project-card",

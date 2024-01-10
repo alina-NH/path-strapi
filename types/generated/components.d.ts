@@ -186,13 +186,11 @@ export interface ContainersProjectsPreview extends Schema.Component {
       Attribute.DefaultTo<'Projects'>;
     cardLeftTop: Attribute.Component<'elements.project-card'> &
       Attribute.Required;
-    cardLeftCenter: Attribute.Component<'elements.project-card'> &
+    cardLeftCenterLeft: Attribute.Component<'elements.project-card-without-image'> &
+      Attribute.Required;
+    cardLeftCenterRight: Attribute.Component<'elements.project-card-without-image'> &
       Attribute.Required;
     cardLeftBottom: Attribute.Component<'elements.project-card'> &
-      Attribute.Required;
-    cardCenterTop: Attribute.Component<'elements.project-card'> &
-      Attribute.Required;
-    cardCenterBottom: Attribute.Component<'elements.project-card'> &
       Attribute.Required;
     cardRightTop: Attribute.Component<'elements.project-card'> &
       Attribute.Required;
@@ -570,16 +568,32 @@ export interface ElementsProductsCarouselItem extends Schema.Component {
   };
 }
 
-export interface ElementsProjectCard extends Schema.Component {
-  collectionName: 'components_elements_project_cards';
+export interface ElementsProjectCardWithoutImage extends Schema.Component {
+  collectionName: 'components_elements_project_card_without_images';
   info: {
-    displayName: 'ProjectCard';
+    displayName: 'ProjectCardWithoutImage';
   };
   attributes: {
     title: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Sport Clubs'>;
-    icon: Attribute.Component<'elements.image'> & Attribute.Required;
+    link: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'/projects#sport-clubs'>;
+  };
+}
+
+export interface ElementsProjectCard extends Schema.Component {
+  collectionName: 'components_elements_project_cards';
+  info: {
+    displayName: 'ProjectCardWithImage';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Sport Clubs'>;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
     link: Attribute.Component<'elements.link'> & Attribute.Required;
   };
 }
@@ -762,6 +776,7 @@ declare module '@strapi/types' {
       'elements.portfolio-item': ElementsPortfolioItem;
       'elements.portfolio-tab': ElementsPortfolioTab;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
+      'elements.project-card-without-image': ElementsProjectCardWithoutImage;
       'elements.project-card': ElementsProjectCard;
       'elements.project-description': ElementsProjectDescription;
       'elements.project-paragraph': ElementsProjectParagraph;

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_project_card_without_images",
+  "info": {
+    "displayName": "ProjectCardWithoutImage"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Sport Clubs"
+    },
+    "link": {
+      "type": "string",
+      "default": "/projects#sport-clubs",
+      "required": true
+    }
+  }
+}
