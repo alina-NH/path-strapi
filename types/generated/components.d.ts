@@ -341,6 +341,7 @@ export interface ElementsBlogItem extends Schema.Component {
     text: Attribute.Component<'elements.project-paragraph', true> &
       Attribute.Required;
     image: Attribute.Component<'elements.image'> & Attribute.Required;
+    itemId: Attribute.String & Attribute.Required;
   };
 }
 

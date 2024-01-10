@@ -32,6 +32,10 @@
       "repeatable": false,
       "required": true,
       "component": "elements.image"
+    },
+    "itemId": {
+      "type": "string",
+      "required": true
     }
   }
 }
