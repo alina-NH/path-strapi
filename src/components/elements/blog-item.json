@@ -16,7 +16,7 @@
       "required": true,
       "default": "December 12, 2023"
     },
-    "button": {
+    "buttonMore": {
       "type": "string",
       "required": true,
       "default": "Continue reading"
@@ -35,6 +35,11 @@
     },
     "itemId": {
       "type": "string",
+      "required": true
+    },
+    "buttonLess": {
+      "type": "string",
+      "default": "Show Less",
       "required": true
     }
   }

@@ -333,13 +333,16 @@ export interface ElementsBlogItem extends Schema.Component {
     date: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'December 12, 2023'>;
-    button: Attribute.String &
+    buttonMore: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Continue reading'>;
     text: Attribute.Component<'elements.project-paragraph', true> &
       Attribute.Required;
     image: Attribute.Component<'elements.image'> & Attribute.Required;
     itemId: Attribute.String & Attribute.Required;
+    buttonLess: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Show Less'>;
   };
 }
 
