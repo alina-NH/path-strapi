@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_portfolio_medias",
+  "info": {
+    "displayName": "PortfolioMedia",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": "image",
+      "required": true
+    },
+    "alt": {
+      "type": "string",
+      "required": true,
+      "default": "Discuss with an expert"
+    },
+    "cloudinaryPublicId": {
+      "type": "string",
+      "default": "images/macdaljouirbuhq5ug7g"
+    }
+  }
+}

@@ -532,7 +532,24 @@ export interface ElementsPortfolioItem extends Schema.Component {
     tab: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'hotels-and-resorts'>;
-    media: Attribute.Component<'elements.image', true> & Attribute.Required;
+    media: Attribute.Component<'elements.portfolio-media', true> &
+      Attribute.Required;
+  };
+}
+
+export interface ElementsPortfolioMedia extends Schema.Component {
+  collectionName: 'components_elements_portfolio_medias';
+  info: {
+    displayName: 'PortfolioMedia';
+    description: '';
+  };
+  attributes: {
+    type: Attribute.String & Attribute.Required & Attribute.DefaultTo<'image'>;
+    alt: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Discuss with an expert'>;
+    cloudinaryPublicId: Attribute.String &
+      Attribute.DefaultTo<'images/macdaljouirbuhq5ug7g'>;
   };
 }
 
@@ -777,6 +794,7 @@ declare module '@strapi/types' {
       'elements.list': ElementsList;
       'elements.partners-footer': ElementsPartnersFooter;
       'elements.portfolio-item': ElementsPortfolioItem;
+      'elements.portfolio-media': ElementsPortfolioMedia;
       'elements.portfolio-tab': ElementsPortfolioTab;
       'elements.products-carousel-item': ElementsProductsCarouselItem;
       'elements.project-card-without-image': ElementsProjectCardWithoutImage;

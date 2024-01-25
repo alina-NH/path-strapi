@@ -59,7 +59,7 @@
     "media": {
       "type": "component",
       "repeatable": true,
-      "component": "elements.image",
+      "component": "elements.portfolio-media",
       "required": true
     }
   }
