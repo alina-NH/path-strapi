@@ -504,6 +504,7 @@ export interface ElementsPortfolioItem extends Schema.Component {
   collectionName: 'components_elements_portfolio_items';
   info: {
     displayName: 'PortfolioItem';
+    description: '';
   };
   attributes: {
     titleLine1: Attribute.String &
@@ -534,6 +535,9 @@ export interface ElementsPortfolioItem extends Schema.Component {
       Attribute.DefaultTo<'hotels-and-resorts'>;
     media: Attribute.Component<'elements.portfolio-media', true> &
       Attribute.Required;
+    backButton: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Back'>;
   };
 }
 

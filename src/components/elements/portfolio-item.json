@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_portfolio_items",
   "info": {
-    "displayName": "PortfolioItem"
+    "displayName": "PortfolioItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -61,6 +62,11 @@
       "repeatable": true,
       "component": "elements.portfolio-media",
       "required": true
+    },
+    "backButton": {
+      "type": "string",
+      "required": true,
+      "default": "Back"
     }
   }
 }
