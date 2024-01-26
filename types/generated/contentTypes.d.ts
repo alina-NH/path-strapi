@@ -942,6 +942,53 @@ export interface ApiCommonCommon extends Schema.SingleType {
   };
 }
 
+export interface ApiCookiePolicyCookiePolicy extends Schema.SingleType {
+  collectionName: 'cookie_policies';
+  info: {
+    singularName: 'cookie-policy';
+    pluralName: 'cookie-policies';
+    displayName: 'CookiePolicy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    text: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cookie-policy.cookie-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cookie-policy.cookie-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::cookie-policy.cookie-policy',
+      'oneToMany',
+      'api::cookie-policy.cookie-policy'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiCourtCourt extends Schema.CollectionType {
   collectionName: 'courts';
   info: {
@@ -1155,6 +1202,53 @@ export interface ApiPortfolioPortfolio extends Schema.SingleType {
   };
 }
 
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'PrivacyPolicy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    text: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToMany',
+      'api::privacy-policy.privacy-policy'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiProjectProject extends Schema.SingleType {
   collectionName: 'projects';
   info: {
@@ -1204,6 +1298,54 @@ export interface ApiProjectProject extends Schema.SingleType {
       'api::project.project',
       'oneToMany',
       'api::project.project'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiTermsAndConditionTermsAndCondition
+  extends Schema.SingleType {
+  collectionName: 'terms_and_conditions';
+  info: {
+    singularName: 'terms-and-condition';
+    pluralName: 'terms-and-conditions';
+    displayName: 'TermsAndCondition';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    text: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::terms-and-condition.terms-and-condition',
+      'oneToMany',
+      'api::terms-and-condition.terms-and-condition'
     >;
     locale: Attribute.String;
   };
@@ -1319,10 +1461,13 @@ declare module '@strapi/types' {
       'api::blog.blog': ApiBlogBlog;
       'api::coming-soon.coming-soon': ApiComingSoonComingSoon;
       'api::common.common': ApiCommonCommon;
+      'api::cookie-policy.cookie-policy': ApiCookiePolicyCookiePolicy;
       'api::court.court': ApiCourtCourt;
       'api::home.home': ApiHomeHome;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::project.project': ApiProjectProject;
+      'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
       'api::validation-error.validation-error': ApiValidationErrorValidationError;
     }
   }
