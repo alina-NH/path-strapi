@@ -564,12 +564,16 @@ export interface ElementsPortfolioMedia extends Schema.Component {
     description: '';
   };
   attributes: {
-    type: Attribute.String & Attribute.Required & Attribute.DefaultTo<'image'>;
+    type: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'image or video or youtube'>;
     alt: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Discuss with an expert'>;
     cloudinaryPublicId: Attribute.String &
       Attribute.DefaultTo<'images/macdaljouirbuhq5ug7g'>;
+    embedYoutubeVideo: Attribute.Text &
+      Attribute.DefaultTo<'<iframe width="560" height="315" src="https://www.youtube.com/embed/TOixZFCwe2U?si=diBdYeVygZ0C5SMb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'>;
   };
 }
 
