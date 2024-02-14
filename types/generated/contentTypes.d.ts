@@ -799,6 +799,13 @@ export interface ApiBlogBlog extends Schema.SingleType {
           localized: true;
         };
       }>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -856,6 +863,13 @@ export interface ApiComingSoonComingSoon extends Schema.SingleType {
         };
       }> &
       Attribute.DefaultTo<'Return back'>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -948,6 +962,7 @@ export interface ApiCookiePolicyCookiePolicy extends Schema.SingleType {
     singularName: 'cookie-policy';
     pluralName: 'cookie-policies';
     displayName: 'CookiePolicy';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -960,6 +975,12 @@ export interface ApiCookiePolicyCookiePolicy extends Schema.SingleType {
   attributes: {
     text: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'elements.metadata'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1028,6 +1049,13 @@ export interface ApiCourtCourt extends Schema.CollectionType {
         };
       }>;
     courtProjects: Attribute.Component<'containers.court-projects'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'elements.metadata'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1124,6 +1152,13 @@ export interface ApiHomeHome extends Schema.SingleType {
           localized: true;
         };
       }>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1178,6 +1213,13 @@ export interface ApiPortfolioPortfolio extends Schema.SingleType {
           localized: true;
         };
       }>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1208,6 +1250,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
     singularName: 'privacy-policy';
     pluralName: 'privacy-policies';
     displayName: 'PrivacyPolicy';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1219,6 +1262,13 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
   };
   attributes: {
     text: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'elements.metadata'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1279,6 +1329,12 @@ export interface ApiProjectProject extends Schema.SingleType {
           localized: true;
         };
       }>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1310,6 +1366,7 @@ export interface ApiTermsAndConditionTermsAndCondition
     singularName: 'terms-and-condition';
     pluralName: 'terms-and-conditions';
     displayName: 'TermsAndCondition';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1321,6 +1378,13 @@ export interface ApiTermsAndConditionTermsAndCondition
   };
   attributes: {
     text: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'elements.metadata'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {

@@ -36,6 +36,16 @@
       },
       "component": "elements.project-description",
       "required": true
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.metadata"
     }
   }
 }

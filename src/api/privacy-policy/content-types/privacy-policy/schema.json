@@ -4,7 +4,8 @@
   "info": {
     "singularName": "privacy-policy",
     "pluralName": "privacy-policies",
-    "displayName": "PrivacyPolicy"
+    "displayName": "PrivacyPolicy",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,17 @@
         }
       },
       "type": "richtext",
+      "required": true
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.metadata",
       "required": true
     }
   }

@@ -37,6 +37,17 @@
       },
       "component": "containers.blog-list",
       "required": true
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.metadata",
+      "required": true
     }
   }
 }
