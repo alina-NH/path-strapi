@@ -364,12 +364,14 @@ export interface ElementsCourtProjectCard extends Schema.Component {
   collectionName: 'components_elements_court_project_cards';
   info: {
     displayName: 'CourtProjectCard';
+    description: '';
   };
   attributes: {
     title: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Bridgewater Resort & SPA'>;
     image: Attribute.Component<'elements.image'> & Attribute.Required;
+    link: Attribute.String & Attribute.Required & Attribute.DefaultTo<'#'>;
   };
 }
 
@@ -454,6 +456,21 @@ export interface ElementsImage extends Schema.Component {
     cloudinaryPublicId: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'images/macdaljouirbuhq5ug7g'>;
+  };
+}
+
+export interface ElementsInstallationServiceItem extends Schema.Component {
+  collectionName: 'components_elements_installation_service_items';
+  info: {
+    displayName: 'installationServiceItem';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Site Survey'>;
+    texts: Attribute.Component<'elements.project-paragraph', true> &
+      Attribute.Required;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
   };
 }
 
@@ -814,6 +831,7 @@ declare module '@strapi/types' {
       'elements.go-to-configurator-title': ElementsGoToConfiguratorTitle;
       'elements.header-nav-item': ElementsHeaderNavItem;
       'elements.image': ElementsImage;
+      'elements.installation-service-item': ElementsInstallationServiceItem;
       'elements.link': ElementsLink;
       'elements.list': ElementsList;
       'elements.metadata': ElementsMetadata;

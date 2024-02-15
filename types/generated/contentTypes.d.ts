@@ -1175,6 +1175,83 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiInstallationServiceInstallationService
+  extends Schema.SingleType {
+  collectionName: 'installation_services';
+  info: {
+    singularName: 'installation-service';
+    pluralName: 'installation-services';
+    displayName: 'InstallationService';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    welcome: Attribute.Component<'containers.welcome-title-text'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subscriptionForm: Attribute.Component<'containers.subscription-form'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    items: Attribute.Component<'elements.installation-service-item', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    courtProjects: Attribute.Component<'containers.court-projects'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    metadata: Attribute.Component<'elements.metadata'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::installation-service.installation-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::installation-service.installation-service',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::installation-service.installation-service',
+      'oneToMany',
+      'api::installation-service.installation-service'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiPortfolioPortfolio extends Schema.SingleType {
   collectionName: 'portfolios';
   info: {
@@ -1528,6 +1605,7 @@ declare module '@strapi/types' {
       'api::cookie-policy.cookie-policy': ApiCookiePolicyCookiePolicy;
       'api::court.court': ApiCourtCourt;
       'api::home.home': ApiHomeHome;
+      'api::installation-service.installation-service': ApiInstallationServiceInstallationService;
       'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::project.project': ApiProjectProject;

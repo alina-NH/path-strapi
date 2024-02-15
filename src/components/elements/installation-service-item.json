@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_installation_service_items",
+  "info": {
+    "displayName": "installationServiceItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Site Survey",
+      "required": true
+    },
+    "texts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.project-paragraph",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
+    }
+  }
+}
