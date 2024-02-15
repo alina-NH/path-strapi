@@ -1062,6 +1062,13 @@ export interface ApiCourtCourt extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    presentation: Attribute.Component<'containers.welcome-title-text'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

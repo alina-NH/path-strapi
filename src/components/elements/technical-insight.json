@@ -23,6 +23,12 @@
       "repeatable": true,
       "component": "elements.list",
       "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": true
     }
   }
 }

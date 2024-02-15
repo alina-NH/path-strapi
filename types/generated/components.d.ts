@@ -276,6 +276,7 @@ export interface ContainersWelcomeTitleText extends Schema.Component {
       Attribute.DefaultTo<'Watch PATH Padel Courts in action.'>;
     typedTexts: Attribute.Component<'elements.welcome-typed-text', true>;
     button: Attribute.String & Attribute.DefaultTo<'Watch PATH in action'>;
+    image: Attribute.Component<'elements.image'>;
   };
 }
 
@@ -750,6 +751,7 @@ export interface ElementsTechnicalInsight extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Galvanized steel posts and mesh manufactured aling with the International Padel Federation requirements:'>;
     list: Attribute.Component<'elements.list', true> & Attribute.Required;
+    image: Attribute.Component<'elements.image'> & Attribute.Required;
   };
 }
 

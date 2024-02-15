@@ -34,6 +34,12 @@
       "type": "string",
       "default": "Watch PATH in action",
       "required": false
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.image",
+      "required": false
     }
   }
 }
