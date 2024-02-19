@@ -640,6 +640,7 @@ export interface ElementsPortfolioItem extends Schema.Component {
     backButton: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Back'>;
+    metadata: Attribute.Component<'elements.metadata'> & Attribute.Required;
   };
 }
 

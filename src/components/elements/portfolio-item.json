@@ -67,6 +67,12 @@
       "type": "string",
       "required": true,
       "default": "Back"
+    },
+    "metadata": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.metadata",
+      "required": true
     }
   }
 }
