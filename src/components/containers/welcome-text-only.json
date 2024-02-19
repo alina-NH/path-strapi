@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_containers_welcome_text_onlies",
+  "info": {
+    "displayName": "WelcomeTextOnly"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "We are PATH.",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "default": "Your PATH to Padel Court Excellence"
+    },
+    "text": {
+      "type": "text",
+      "required": true,
+      "default": "Since 2013, our company has been at the forefront of delivering exceptional padel courts across New Zealand, the UK, and the Pacific region. Collaborating with esteemed construction firms and padel court manufacturers worldwide, we specialize in crafting top-tier courts for private residences, sports clubs, hotels, and resorts. Our commitment to excellence extends beyond mere construction - each court meets the rigorous standards set by the International Padel Tennis Federation, ensuring an unparalleled player experience."
+    }
+  }
+}

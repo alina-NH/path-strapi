@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_containers_portfolio_previews",
+  "info": {
+    "displayName": "PortfolioPreview"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "LatestProjects",
+      "required": true
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "elements.portfolio-tab",
+      "required": true
+    }
+  }
+}

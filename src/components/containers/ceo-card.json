@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_containers_ceo_cards",
+  "info": {
+    "displayName": "ceoCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "A Word From the CEO"
+    },
+    "texts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.project-paragraph",
+      "required": true
+    },
+    "photo": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    },
+    "sign": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "elements.image"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.project-paragraph",
+      "required": true
+    }
+  }
+}

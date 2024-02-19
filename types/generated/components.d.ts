@@ -33,6 +33,24 @@ export interface ContainersBlogPreview extends Schema.Component {
   };
 }
 
+export interface ContainersCeoCard extends Schema.Component {
+  collectionName: 'components_containers_ceo_cards';
+  info: {
+    displayName: 'ceoCard';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'A Word From the CEO'>;
+    texts: Attribute.Component<'elements.project-paragraph', true> &
+      Attribute.Required;
+    photo: Attribute.Component<'elements.image'> & Attribute.Required;
+    sign: Attribute.Component<'elements.image'> & Attribute.Required;
+    footer: Attribute.Component<'elements.project-paragraph', true> &
+      Attribute.Required;
+  };
+}
+
 export interface ContainersContactUs extends Schema.Component {
   collectionName: 'components_containers_contactuses';
   info: {
@@ -163,6 +181,25 @@ export interface ContainersHeader extends Schema.Component {
   };
 }
 
+export interface ContainersPortfolioPreview extends Schema.Component {
+  collectionName: 'components_containers_portfolio_previews';
+  info: {
+    displayName: 'PortfolioPreview';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'LatestProjects'>;
+    tabs: Attribute.Component<'elements.portfolio-tab', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+  };
+}
+
 export interface ContainersProductsCarousel extends Schema.Component {
   collectionName: 'components_containers_products_carousels';
   info: {
@@ -255,6 +292,24 @@ export interface ContainersTechnicalInsights extends Schema.Component {
       Attribute.Required;
     downloadFile: Attribute.Component<'elements.download-file-card'> &
       Attribute.Required;
+  };
+}
+
+export interface ContainersWelcomeTextOnly extends Schema.Component {
+  collectionName: 'components_containers_welcome_text_onlies';
+  info: {
+    displayName: 'WelcomeTextOnly';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'We are PATH.'>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Your PATH to Padel Court Excellence'>;
+    text: Attribute.Text &
+      Attribute.Required &
+      Attribute.DefaultTo<'Since 2013, our company has been at the forefront of delivering exceptional padel courts across New Zealand, the UK, and the Pacific region. Collaborating with esteemed construction firms and padel court manufacturers worldwide, we specialize in crafting top-tier courts for private residences, sports clubs, hotels, and resorts. Our commitment to excellence extends beyond mere construction - each court meets the rigorous standards set by the International Padel Tennis Federation, ensuring an unparalleled player experience.'>;
   };
 }
 
@@ -358,6 +413,19 @@ export interface ElementsButto extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Contact Us'>;
     icon: Attribute.Component<'elements.image'> & Attribute.Required;
+  };
+}
+
+export interface ElementsCoordinates extends Schema.Component {
+  collectionName: 'components_elements_coordinates';
+  info: {
+    displayName: 'coordinates';
+    description: '';
+  };
+  attributes: {
+    latitude: Attribute.String & Attribute.Required & Attribute.DefaultTo<'0'>;
+    longitude: Attribute.String & Attribute.Required & Attribute.DefaultTo<'0'>;
+    caption: Attribute.String;
   };
 }
 
@@ -809,23 +877,27 @@ declare module '@strapi/types' {
     export interface Components {
       'containers.blog-list': ContainersBlogList;
       'containers.blog-preview': ContainersBlogPreview;
+      'containers.ceo-card': ContainersCeoCard;
       'containers.contact-us': ContainersContactUs;
       'containers.court-projects': ContainersCourtProjects;
       'containers.court-welcome': ContainersCourtWelcome;
       'containers.footer': ContainersFooter;
       'containers.go-to-configurator': ContainersGoToConfigurator;
       'containers.header': ContainersHeader;
+      'containers.portfolio-preview': ContainersPortfolioPreview;
       'containers.products-carousel': ContainersProductsCarousel;
       'containers.projects-preview': ContainersProjectsPreview;
       'containers.service-preview': ContainersServicePreview;
       'containers.subscription-form': ContainersSubscriptionForm;
       'containers.technical-insights': ContainersTechnicalInsights;
+      'containers.welcome-text-only': ContainersWelcomeTextOnly;
       'containers.welcome-title-text': ContainersWelcomeTitleText;
       'containers.welcome': ContainersWelcome;
       'elements.blog-card-with-image': ElementsBlogCardWithImage;
       'elements.blog-card-without-image': ElementsBlogCardWithoutImage;
       'elements.blog-item': ElementsBlogItem;
       'elements.butto': ElementsButto;
+      'elements.coordinates': ElementsCoordinates;
       'elements.court-project-card': ElementsCourtProjectCard;
       'elements.download-file-card': ElementsDownloadFileCard;
       'elements.footer-nav-column': ElementsFooterNavColumn;
